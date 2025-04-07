@@ -7,7 +7,7 @@ function registrarGasto() {
     const monto = parseInt(prompt("Ingrese el valor (numeros sin puntos):"));
     const fecha = prompt("Ingresar la fecha (DD/MM/AAAA):");
     
-    if (!descripcion || !fecha) {
+    if (!descripcion || !fecha || !monto) {
         alert("Datos inválidos. Intente nuevamente.");
         return;
     }
@@ -20,7 +20,7 @@ function registrarPrestamo() {
     const monto = parseInt(prompt("Ingrese el valor (numeros sin puntos):"));
     const fecha = prompt("Ingrese la fecha (DD/MM/AAAA):");
 
-    if (!persona || !fecha) {
+    if (!persona || !fecha || !monto) {
         alert("Datos inválidos. Intente nuevamente.");
         return;
     }
