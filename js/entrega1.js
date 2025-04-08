@@ -2,11 +2,7 @@
 const gastos = [];
 const prestamos = [];
 
-function registrarGasto() {
-    const descripcion = prompt("Ingresar la descripción del gasto:");
-    const monto = parseInt(prompt("Ingrese el valor (numeros sin puntos):"));
-    const fecha = prompt("Ingresar la fecha (DD/MM/AAAA):");
-    
+function registrarGasto(descripcion, monto, fecha) {
     if (!descripcion || !fecha || !monto) {
         alert("Datos inválidos. Intente nuevamente.");
         return;
@@ -64,7 +60,10 @@ do {
 
     switch (opcion) {
         case 1:
-            registrarGasto();
+            const descripcion = prompt("Ingresar la descripción del gasto:");
+            const monto = parseInt(prompt("Ingrese el valor (numeros sin puntos):"));
+            const fecha = prompt("Ingresar la fecha (DD/MM/AAAA):");
+            registrarGasto(descripcion, monto, fecha);
             break;
         case 2:
             registrarPrestamo();
