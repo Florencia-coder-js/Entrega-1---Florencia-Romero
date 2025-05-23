@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,57 @@
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <title>Carrito</title>
+    <link rel="icon" href="img/applee.png" sizes="32x32" type="image/png">
+    <title>Carrito - iStore</title>
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="navbar-logo">
-            <span class="material-icons">apple</span> iPhoneStore
+    <div class="navbar">
+        <p class="nav-1">
+            | Contactanos por Instagram o WhatsApp |
+        </p>
+    </div>
+    <div class="navbar-2">
+        <div>
+            <a href="./index.html">
+                Inicio
+            </a>
         </div>
-    </nav>
-    <h1>Carrito</h1>
+        <div>
+            <a href="./datos-personales.html" class="person-icon">
+              <span class="material-symbols-outlined">
+                person
+              </span>
+            </a>
+      
+        </div>
+        <div class="navbar-cart">
+            <a href="./carrito.html" class="carrito-link">
+                <h5 id="cart-count" class="cart-count">0</h5>
+
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="carrito-container">
+        <div id="cart-section" class="productos-carrito">
+            <!-- Se renderizan los productos aquí por JS -->
+        </div>
+
+        <div id="resumen-container" class="resumen-compra">
+            <!-- Se renderiza el resumen por JS -->
+        </div>
+    </div>
+
     <section id="cart-section" class="cart-section"></section>
-    <a href="./index.html"><span class="material-icons">
-        arrow_back
-       </span></a>
+    <a href="./index.html" class="continuar-link">
+        <span class="material-icons">arrow_back_ios</span>
+        Continuar comprando
+    </a>
 </body>
+
 </html>

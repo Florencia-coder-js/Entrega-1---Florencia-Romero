@@ -1,0 +1,66 @@
+[
+    {
+        "telefonos": [
+        {
+            "id": 1,
+            "nombreModelo": "iPhone 11",
+            "gb": 64,
+            "image": "img/iphone11.webp",
+            "bateria": 100,
+            "precio": 300000
+        },
+        {
+            "id": 2,
+            "nombreModelo": "iPhone 14 pro",
+            "gb": 128,
+            "bateria": 86,
+            "image": "img/iphone14pro.webp",
+            "precio": 599300
+        },
+        {
+            "id": 3,
+            "nombreModelo": "iPhone 15 pro",
+            "gb": 128,
+            "bateria": 90,
+            "image": "img/15promax.jpg",
+            "precio": 770400
+        },
+        {
+            "id": 4,
+            "nombreModelo": "iPhone 15 pro max",
+            "gb": 256,
+            "image": "img/15promax.jpg",
+            "bateria": 96,
+            "precio": 860000
+        }
+        ],
+        "macs": [
+          {
+            "id": 101,
+            "nombreModelo": "MacBook Air M2",
+            "gb": 256,
+            "image": "img/macbook.webp",
+            "precio": 1059599
+          }
+        ],
+        "airpods": [
+          {
+            "id": 201,
+            "nombreModelo": "AirPods Pro 2",
+            "image": "img/airpods-pro.jpg",
+            "precio": 250000
+          }
+        ],
+        "relojes": [
+          {
+            "id": 301,
+            "nombreModelo": "Apple Watch Series 9",
+            "image": "img/watch.png",
+            "bateria": 98,
+            "precio": 450000
+          }
+        ]
+    }
+      
+    
+]
