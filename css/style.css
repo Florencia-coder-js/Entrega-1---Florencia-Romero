@@ -581,3 +581,34 @@ body {
 .person-icon:hover{
     color: #777455;
 }
+.bienvenida {
+    background-color: #d1ceb3;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 50px auto;
+  }
+  
+  .saludo {
+    font-size: 18px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .logout {
+    background-color: #db6f6f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout:hover {
+    background-color: #c0392b;
+  }

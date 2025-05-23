@@ -100,8 +100,9 @@ function renderFormularioLogin() {
 
     mostrarMensaje(mensaje, `¡Bienvenido, ${usuario.nombre}!`, "exito")
     localStorage.setItem("usuarioActivo", JSON.stringify(usuario))
+
     setTimeout(() => {
-      window.location.href = "carrito.html"
+      mostrarBienvenida(usuario) 
     }, 2000)
   })
 
@@ -115,5 +116,34 @@ function renderFormularioLogin() {
   formulario.append(inputEmail, inputPassword, boton, mensaje, linkRegistro)
   authContainer.appendChild(formulario)
 }
+function mostrarBienvenida(usuario) {
+  authContainer.innerHTML = ""
 
-renderFormularioLogin()
+  const bienvenida = document.createElement("div")
+  bienvenida.classList.add("bienvenida")
+
+  const saludo = document.createElement("h2")
+  saludo.classList.add("saludo")
+  saludo.innerHTML = `<h2>Hola, ${usuario.nombre}!</h2>
+      <p>Ya podes realizar tus compras, gracias por elegirnos!</p>`
+
+  const botonLogout = document.createElement("button")
+  botonLogout.textContent = "Cerrar sesión"
+  botonLogout.classList.add("logout")
+
+  botonLogout.addEventListener("click", () => {
+    localStorage.removeItem("usuarioActivo")
+    renderFormularioLogin()
+  })
+
+  bienvenida.append(saludo, botonLogout)
+  authContainer.appendChild(bienvenida)
+}
+
+
+const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"))
+if (usuarioActivo) {
+  mostrarBienvenida(usuarioActivo)
+} else {
+  renderFormularioLogin()
+}
