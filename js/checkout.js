@@ -35,10 +35,15 @@ function renderResumen() {
     `
     resumen.appendChild(div)
   })
+  
+  const envio = subtotal > 500000 ? 0 : 5000
+  const total = subtotal + envio
 
   resumen.innerHTML += `
-    <hr>
-    <p>Subtotal: <strong>$${subtotal.toLocaleString()}</strong></p>
+  <hr>
+  <p>Subtotal: <strong>$${subtotal.toLocaleString()}</strong></p>
+  <p>Envío: <strong>${envio === 0 ? "Gratis" : "$" + envio.toLocaleString()}</strong></p>
+  <p>Total: <strong>$${total.toLocaleString()}</strong></p>
   `
 }
 renderResumen()
@@ -127,6 +132,15 @@ document.getElementById("finalizar-compra").onclick = () => {
 
     if (!titular || !numero || !codigo) {
       mostrarMensaje(errorEnvio, "Complete todos los datos de la tarjeta.", "error")
+      return
+    }
+    if (!/^\d{13,19}$/.test(numero)) {
+      mostrarMensaje(errorEnvio, "El número de tarjeta debe tener entre 13 y 19 dígitos numéricos.", "error")
+      return
+    }
+    
+    if (!/^\d{3}$/.test(codigo)) {
+      mostrarMensaje(errorEnvio, "El código de seguridad debe tener exactamente 3 números.", "error")
       return
     }
   }

@@ -89,7 +89,7 @@ function renderResumen() {
     }
 
     const subtotal = cartStorage.reduce((total, tel) => total + tel.precio * tel.unidades, 0)
-    const envio = subtotal > 100000 ? 0 : 1000
+    const envio = subtotal > 500000 ? 0 : 5000
     const total = subtotal + envio
 
     resumenContainer.innerHTML = `
@@ -98,7 +98,7 @@ function renderResumen() {
             <hr>
 
             <p>Subtotal: <strong>$${subtotal.toLocaleString()}</strong></p>
-            <p>Envío: <strong>$${envio.toLocaleString()}</strong></p>
+            <p>Envío: <strong>$${envio.toLocaleString()}</strong><br><p>(Si la compra es mayor a $500.000, envío gratis!)</p></p>
             <p>Total: <strong>$${total.toLocaleString()}</strong></p>
             <button id="confirmar-compra">Iniciar compra</button>
         </div>
